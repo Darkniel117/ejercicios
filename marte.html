@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tu peso en otro planeta</title>
+        <style type="text/css">
+            body
+            {
+                background-color: black;
+                color: brown;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Tu peso en otro planeta</h1>
+        <p>Hola, bienvenido a mi pagina</p>
+        <script type="text/javascript">
+            let usuario = prompt("Ingrese su masa");
+            let planeta = prompt("Elija el planeta de su preferencia /n 1 es Marte, 2 es Jupiter");
+            let peso = parseInt(usuario);
+            let g_tierra = 9.8;
+            let g_marte = 3.7;
+            let g_jupiter = 24.8;
+            let peso_final;
+            if (planeta == 1){
+                peso_final = peso * g_marte / g_tierra;
+            }else{
+                peso_final = peso * g_jupiter / g_tierra;
+            }
+            peso_final = parseInt(peso_final);
+            document.write("Su masa en marte es de <b> " + peso_final + " Kilogramos </b>");
+        </script>
+    </body>
+</html>
